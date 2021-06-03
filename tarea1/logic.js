@@ -24,9 +24,17 @@ function getDirt(states) {
   if (states[1] == "CLEAN" && Math.floor(Math.random() * 10) > 5) {
     states[1] = "DIRTY";
     document.getElementById("trash-a").classList.remove("d-none");
+    //Logging
+    let child = document.createElement("p");
+    child.innerHTML = `Location: A | Action get Dirt`;
+    document.getElementById("log").prepend(child);
   } else if (states[2] == "CLEAN" && Math.floor(Math.random() * 10) < 5) {
     states[2] = "DIRTY";
     document.getElementById("trash-b").classList.remove("d-none");
+    // get dirt loggin
+    let child = document.createElement("p");
+    child.innerHTML = `Location: B | Action get Dirt`;
+    document.getElementById("log").prepend(child);
   }
   console.log(states);
 }
