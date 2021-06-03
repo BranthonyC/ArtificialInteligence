@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agente Inteligente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="global.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col d-flex justify-content-center align-content-center">
+          <h2><strong>Reflex agent</strong></h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--begin col-->
+        <div class="col-4">
+          <h2>Estados</h2>
+          <img src="./vacum_states.png" alt="Posibles estados">
+        </div>
+        <!--begin col-->
+        <div class="col-6">
+          <div class="row">
+              <!--begin col-->
+        <div class="col">
+          <div class="data">
+            <div class="status">
+                <span class="clean"></span>Clean
+                <span class="dirty"></span>Dirty
+            </div>
+          </div>
+          <div class="states">
+            <div class="a" data-vacum="active" data-dirty="true">
+              <img src="./trash.png" alt="basura" id="trash-a">
+              <img src="./vacuum-cleaner.png" alt="vacum" class="d-none" id="vacum-a">
+            </div>
+            <div class="b" data-vacum="inactive" data-dirty="true">
+              <img src="./trash.png" alt="basura" id="trash-b">
+              <img src="./vacuum-cleaner.png" alt="vacum" class="d-none" id="vacum-b">
+            </div>
+          </div>
+        </div>
+        <!--End col-->
+          </div>
+          <div class="row">
+            <!--begin col-->
+            <div class="col">
+              <p id="log"></p>
+            </div>
+            <!--end col-->
+          </div>
+        </div>
+      </div>
+      </div>
+      <!--end col-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="logic.js"></script>
+    </body>
+  </body>
+</html>
+
