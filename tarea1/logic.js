@@ -28,7 +28,8 @@ function getDirt(states) {
     let child = document.createElement("p");
     child.innerHTML = `Location: A | Action get Dirt`;
     document.getElementById("log").prepend(child);
-  } else if (states[2] == "CLEAN" && Math.floor(Math.random() * 10) < 5) {
+  }
+  if (states[2] == "CLEAN" && Math.floor(Math.random() * 10) < 5) {
     states[2] = "DIRTY";
     document.getElementById("trash-b").classList.remove("d-none");
     // get dirt loggin
