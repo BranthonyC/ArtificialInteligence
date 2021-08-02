@@ -50,3 +50,90 @@ body {
 img {
   max-width: 100%;
 }
+
+.description{
+  position: relative;
+}
+
+.description .state-badge{
+  position: absolute;
+  top: 0;
+  background-color: red;
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-state{
+  background-color: greenyellow !important;
+}
+
+.description .state1{
+  top: 27%;
+  left: 10%;
+}
+
+.description .state2{
+  top: 27%;
+  left: 52%;
+}
+
+.description .state3{
+  top: 42%;
+  left: 10%;
+}
+
+.description .state4{
+  top: 42%;
+  left: 52%;
+}
+
+.description .state5{
+  top: 57%;
+  left: 10%;
+}
+
+
+.description .state6{
+  top: 57%;
+  left: 52%;
+}
+
+.description .state7{
+  top: 72%;
+  left: 10%;
+}
+
+.description .state8{
+  top: 72%;
+  left: 52%;
+}
+
+#log{
+  max-height: 15rem;
+  background-color: black;
+  color: greenyellow;
+  overflow: scroll;
+}
+/* .states{
+  position: relative;
+}
+
+
+.state-0{
+  position:absolute;
+  top: 0;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+} */
