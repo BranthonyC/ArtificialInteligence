@@ -32,7 +32,6 @@ function updateStateCount(state){
   if(state[0]==="A"){
     if(state[1] === "DIRTY" && state[2] === "DIRTY"){
       state1++;
-      console.log("Estado 1 Visitas: " + state1);
       window.document.getElementById("state1").innerHTML = state1;
       if(state1>=2)
         window.document.getElementById("state1").classList.add("success-state");
@@ -42,19 +41,16 @@ function updateStateCount(state){
       window.document.getElementById("state3").innerHTML = state3;
       if(state3>=2)
         window.document.getElementById("state3").classList.add("success-state");
-      console.log("Estado 3 Visitas: " + state3);
     }else if(state[1] === "CLEAN" && state[2] === "DIRTY"){
       state5++;
       window.document.getElementById("state5").innerHTML = state5;
       if(state5>=2)
         window.document.getElementById("state5").classList.add("success-state");
-      console.log("Estado 5 Visitas: " + state5);
     }else if(state[1] === "CLEAN" && state[2] === "CLEAN"){
       state7++;
       window.document.getElementById("state7").innerHTML = state7;
       if(state7>=2)
         window.document.getElementById("state7").classList.add("success-state");
-      console.log("Estado 7 Visitas: " + state7);
     }
 
   }else if(state[0]==="B"){
@@ -63,18 +59,15 @@ function updateStateCount(state){
       window.document.getElementById("state2").innerHTML = state2;
       if(state2>=2)
         window.document.getElementById("state2").classList.add("success-state");
-      console.log("Estado 2 Visitas: " + state2);
     }
     else if(state[1] === "DIRTY" && state[2] === "CLEAN"){
       state4++;
       window.document.getElementById("state4").innerHTML = state4;
       if(state4>=2)
         window.document.getElementById("state4").classList.add("success-state");
-      console.log("Estado 4 Visitas: " + state4);
     }
     else if(state[1] === "CLEAN" && state[2] === "DIRTY"){
       state6++;
-      console.log("Estado 6 Visitas: " + state6);
       window.document.getElementById("state6").innerHTML = state6;
       if(state6>=2)
         window.document.getElementById("state6").classList.add("success-state");
@@ -83,7 +76,6 @@ function updateStateCount(state){
       window.document.getElementById("state8").innerHTML = state8;
       if(state8>=2)
         window.document.getElementById("state8").classList.add("success-state");
-      console.log("Estado 8 Visitas: " + state8);
     }
     
   }
@@ -107,7 +99,6 @@ function getDirt(states) {
     child.innerHTML = `Location: B | Action get Dirt`;
     document.getElementById("log").prepend(child);
   }
-  console.log(states);
   updateStateCount(states);
 }
 
@@ -123,6 +114,10 @@ function test(states) {
     else if (location == "B") states[2] = "CLEAN";
   } else if (action_result == "RIGHT") states[0] = "B";
   else if (action_result == "LEFT") states[0] = "A";
+
+  if(state1 >=2 && state2 >=2 && state3 >=2 && state4 >=2 && state5 >=2 && state6 >=2 && state7 >=2 && state8 >=2 ){
+    return;
+  }
   setTimeout(function () {
     test(states);
     getDirt(states);
